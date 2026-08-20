@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://erflogworld.com/sitemap.xml

@@ -1,0 +1,6 @@
+{
+  "name": "ERFLOGWORLD",
+  "description": "AI Transformation & Digital Solutions - Automate operations, qualify leads, and accelerate growth.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
