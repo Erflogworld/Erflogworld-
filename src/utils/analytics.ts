@@ -50,8 +50,8 @@ export function trackEvent(
       }
     }
 
-    // 4. Development logging
-    if (process.env.NODE_ENV !== 'production') {
+    // 4. Development logging (safe for browser environments without process global)
+    if (typeof import.meta !== 'undefined' && import.meta.env?.DEV) {
       console.log(`[Analytics Event] ${eventName}:`, params);
     }
   } catch (err) {
