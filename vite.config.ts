@@ -48,6 +48,7 @@ function devApiPlugin(): Plugin {
 
 export default defineConfig(() => {
   return {
+    base: '/',
     plugins: [react(), tailwindcss(), devApiPlugin()],
     resolve: {
       alias: {
@@ -57,25 +58,7 @@ export default defineConfig(() => {
     build: {
       target: 'esnext',
       cssCodeSplit: true,
-      minify: 'esbuild',
-      rollupOptions: {
-        output: {
-          manualChunks(id) {
-            if (id.includes('node_modules')) {
-              if (id.includes('react') || id.includes('react-dom')) {
-                return 'vendor-react';
-              }
-              if (id.includes('motion')) {
-                return 'vendor-motion';
-              }
-              if (id.includes('lucide-react')) {
-                return 'vendor-icons';
-              }
-              return 'vendor-libs';
-            }
-          },
-        },
-      },
+      minify: 'esbuild' as const,
     },
     server: {
       host: '0.0.0.0',

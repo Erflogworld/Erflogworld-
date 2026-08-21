@@ -241,7 +241,9 @@ export const Testimonials: React.FC = () => {
                         {item.name}
                       </h4>
                       {item.verified && (
-                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" title="Verified Client" />
+                        <span title="Verified Client" className="inline-flex items-center">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                        </span>
                       )}
                     </div>
                     <p className="font-poppins text-[11px] text-[#535353]">{item.role}</p>
