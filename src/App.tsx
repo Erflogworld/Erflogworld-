@@ -21,7 +21,6 @@ import { ContactFormSection } from './components/ContactFormSection';
 import { Footer } from './components/Footer';
 import { StrategyCallModal } from './components/StrategyCallModal';
 import { FloatingWhatsApp } from './components/FloatingWhatsApp';
-import { SEOHealthChecker } from './components/SEOHealthChecker';
 
 const SEO_SECTIONS = [
   'home',
@@ -143,7 +142,6 @@ export default function App() {
         />
         
         <FloatingWhatsApp />
-        <SEOHealthChecker />
       </motion.main>
     </div>
   );
